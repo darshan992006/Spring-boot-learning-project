@@ -1,10 +1,11 @@
 package net.engineeringdigest.journalApp.service;
 
-import net.engineeringdigest.journalApp.entity.JournalEntry;
+
 import net.engineeringdigest.journalApp.repository.JournalEntryRepo;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import net.engineeringdigest.journalApp.entity.JournalEntry;
 
 import java.util.List;
 import java.util.Optional;
