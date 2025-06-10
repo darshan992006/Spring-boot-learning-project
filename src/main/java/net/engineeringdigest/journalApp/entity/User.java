@@ -14,11 +14,26 @@ import java.util.List;
 
 @Document("users")
 public class User {
+
+    public User(ObjectId id, @NonNull String userName, String email, boolean sentimentalAnalysis, @NonNull String password, List<JournalEntry> journalEntries, List<String> roles) {
+        this.id = id;
+        this.userName = userName;
+        this.email = email;
+        this.sentimentalAnalysis = sentimentalAnalysis;
+        this.password = password;
+        this.journalEntries = journalEntries;
+        this.roles = roles;
+    }
+
+    public User() {
+    }
     @Id
     private ObjectId id;
     @Indexed(unique = true)
     @NonNull
     private String userName;
+    private String email;
+    private boolean sentimentalAnalysis;
     @NonNull
     private String password;
     @DBRef

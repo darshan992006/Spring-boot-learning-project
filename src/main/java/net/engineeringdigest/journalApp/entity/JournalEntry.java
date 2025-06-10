@@ -11,6 +11,16 @@ import java.util.Date;
 
 @Document("journal_entries")
 public class JournalEntry{
+    public JournalEntry() {
+    }
+
+    public JournalEntry(ObjectId id, @NonNull String title, String content, LocalDateTime date) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.date = date;
+    }
+
     @Id
     private ObjectId id;
     @NonNull
