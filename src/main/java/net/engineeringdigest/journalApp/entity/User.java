@@ -33,6 +33,23 @@ public class User {
     @NonNull
     private String userName;
     private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isSentimentalAnalysis() {
+        return sentimentalAnalysis;
+    }
+
+    public void setSentimentalAnalysis(boolean sentimentalAnalysis) {
+        this.sentimentalAnalysis = sentimentalAnalysis;
+    }
+
     private boolean sentimentalAnalysis;
     @NonNull
     private String password;
