@@ -1,6 +1,7 @@
 package net.engineeringdigest.journalApp.entity;
 
 
+import net.engineeringdigest.journalApp.enums.Sentiment;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,14 +12,24 @@ import java.util.Date;
 
 @Document("journal_entries")
 public class JournalEntry{
-    public JournalEntry() {
-    }
 
-    public JournalEntry(ObjectId id, @NonNull String title, String content, LocalDateTime date) {
+    public JournalEntry(ObjectId id, @NonNull String title, String content, LocalDateTime date, Sentiment sentiment) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.date = date;
+        this.sentiment = sentiment;
+    }
+
+    public JournalEntry() {
+    }
+
+    public Sentiment getSentiment() {
+        return sentiment;
+    }
+
+    public void setSentiment(Sentiment sentiment) {
+        this.sentiment = sentiment;
     }
 
     @Id
@@ -27,6 +38,8 @@ public class JournalEntry{
     private String title;
     private String content;
     private LocalDateTime date;
+
+    private Sentiment sentiment;
 
     public ObjectId getId() {
         return id;
