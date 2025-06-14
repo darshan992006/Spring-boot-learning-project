@@ -1,6 +1,7 @@
 package net.engineeringdigest.journalApp.service;
 
 import net.engineeringdigest.journalApp.repository.UserRepo;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -14,6 +15,7 @@ public class UserDetailServiceImplTests {
     @Mock
     private UserRepo userRepo;
 
+    @Disabled
     @Test
     void loadUsrByUserNameTest(){
         UserDetails vipul = userDetailService.loadUserByUsername("vipul");

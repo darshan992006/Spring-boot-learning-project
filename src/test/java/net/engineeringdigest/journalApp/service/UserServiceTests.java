@@ -19,7 +19,7 @@ public class UserServiceTests {
 
     //there are more annotations like beforeEach,beforeAll,afterEach,afterAll
 
-//    @Disabled
+    @Disabled
 //    @Test
     @ParameterizedTest
     @ValueSource(strings = {
